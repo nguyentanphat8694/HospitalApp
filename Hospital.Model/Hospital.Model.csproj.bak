@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4828E7C-0ECD-4A10-87C9-83CE639898D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital.App</RootNamespace>
+    <AssemblyName>Hospital.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionRec.cs" />
+    <Compile Include="ClsDichVu.cs" />
+    <Compile Include="Dba\NTPObDMNgheNhiep.cs" />
+    <Compile Include="Dba\NTPObDMQuan.cs" />
+    <Compile Include="Dba\NTPObDMTinh.cs" />
+    <Compile Include="Dba\NTPObPhacDo.cs" />
+    <Compile Include="Dba\NTPObKey.cs" />
+    <Compile Include="Dba\NTPObLichLamViec.cs" />
+    <Compile Include="Dba\NTPObHenKham.cs" />
+    <Compile Include="Dba\NTPObPhieuXetNghiem.cs" />
+    <Compile Include="Dba\NTPObCDHA.cs" />
+    <Compile Include="Dba\NTPObDMNhomXetNghiem.cs" />
+    <Compile Include="Dba\NTPObDMXetNghiem.cs" />
+    <Compile Include="Dba\NTPObSinhHieu.cs" />
+    <Compile Include="Dba\NTPObPhieuThuoc.cs" />
+    <Compile Include="Dba\NTPObPhieuThu.cs" />
+    <Compile Include="Dba\NTPObNhapKho.cs" />
+    <Compile Include="Dba\NTPObImage.cs" />
+    <Compile Include="Dba\NTPObCTNhapKho.cs" />
+    <Compile Include="Dba\NTPObCTChiDinh.cs" />
+    <Compile Include="Dba\NTPObChiDinh.cs" />
+    <Compile Include="Dba\HospitalSqlCom.cs" />
+    <Compile Include="Dba\NTPObBenhAn.cs" />
+    <Compile Include="Dba\NTPObSLTon.cs" />
+    <Compile Include="Dba\NTPObTKBenhNhan.cs" />
+    <Compile Include="DBStatic_DB.cs" />
+    <Compile Include="DBStatic.cs" />
+    <Compile Include="frmKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKey.Designer.cs">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keylist\KeysListObDMNgheNghiep.cs" />
+    <Compile Include="Keylist\KeysListObDMQuan.cs" />
+    <Compile Include="Keylist\KeysListObDMTinh.cs" />
+    <Compile Include="Keylist\New\KeysListObDichVuTon.cs" />
+    <Compile Include="Keylist\New\KeysListObTKBenhNhan.cs" />
+    <Compile Include="Keylist\New\KeysListObPhacDo.cs" />
+    <Compile Include="Keylist\New\KeysListObLichLamViec.cs" />
+    <Compile Include="Keylist\New\KeysListObHenKham.cs" />
+    <Compile Include="Keylist\New\KeysListObPhieuXetNghiem.cs" />
+    <Compile Include="Keylist\New\KeysListObCustomer.cs" />
+    <Compile Include="Keylist\New\KeysListObDMNhomXetNghiem.cs" />
+    <Compile Include="Keylist\New\KeysListObDMXetNghiem.cs" />
+    <Compile Include="Keylist\New\KeysListObPhieuThuoc.cs" />
+    <Compile Include="Keylist\New\KeysListObSinhHieu.cs" />
+    <Compile Include="Keylist\New\KeysListObChiDinh.cs" />
+    <Compile Include="Keylist\New\KeysListObCTChiDinh.cs" />
+    <Compile Include="Keylist\New\KeysListObCTNhapKho.cs" />
+    <Compile Include="Keylist\New\KeysListObImage.cs" />
+    <Compile Include="Keylist\New\KeysListObPhieuThu.cs" />
+    <Compile Include="Keylist\New\KeysListObNhapKho.cs" />
+    <Compile Include="Keylist\New\KeysListObCDHA.cs" />
+    <Compile Include="Keylist\New\KeysListObBenhAn.cs" />
+    <Compile Include="Keylist\New\KeyslistObSLTon.cs" />
+    <Compile Include="MainChangeDB.cs" />
+    <Compile Include="MainNTP.cs" />
+    <Compile Include="Keylist\KeysListObDesign.cs" />
+    <Compile Include="Keylist\KeysListObRecord.cs" />
+    <Compile Include="Keylist\KeysListObDMKho.cs" />
+    <Compile Include="Keylist\KeysListObDMMau.cs" />
+    <Compile Include="Keylist\KeysListObDMICD.cs" />
+    <Compile Include="Keylist\KeysListObDMLK.cs" />
+    <Compile Include="Keylist\KeysListObDMPK.cs" />
+    <Compile Include="Keylist\KeysListObDMNhanSu.cs" />
+    <Compile Include="Keylist\KeysListObDMTSo.cs" />
+    <Compile Include="Keylist\KeysListObDMDonVi.cs" />
+    <Compile Include="Keylist\KeysListObDMNhomDichVu.cs" />
+    <Compile Include="Keylist\KeysListObDMDichVu.cs" />
+    <Compile Include="Keylist\KeysListObUser.cs" />
+    <Compile Include="Dba\NTPObDesign.cs" />
+    <Compile Include="Dba\NTPObRecord.cs" />
+    <Compile Include="Dba\NTPObDMKho.cs" />
+    <Compile Include="Dba\NTPObDMMau.cs" />
+    <Compile Include="Dba\NTPObDMICD.cs" />
+    <Compile Include="Dba\NTPObDMLK.cs" />
+    <Compile Include="Dba\NTPObDMPK.cs" />
+    <Compile Include="Dba\NTPObDMNhanSu.cs" />
+    <Compile Include="Dba\NTPObDMTSo.cs" />
+    <Compile Include="Dba\NTPObDMDonVi.cs" />
+    <Compile Include="Dba\NTPObDMNhomDichVu.cs" />
+    <Compile Include="Dba\NTPObDMDichVu.cs" />
+    <Compile Include="Dba\NTPObUser.cs" />
+    <Compile Include="Dba\NTPObCustomer.cs" />
+    <Compile Include="NTPUserSetting.cs" />
+    <Compile Include="NTPValidate.cs" />
+    <Compile Include="Object\ObDichVuTon.cs" />
+    <Compile Include="Object\ObDMNgheNghiep.cs" />
+    <Compile Include="Object\ObDMQuan.cs" />
+    <Compile Include="Object\ObDMTinh.cs" />
+    <Compile Include="Object\ObHenKham.cs" />
+    <Compile Include="Object\ObCTXetNghiem.cs" />
+    <Compile Include="Object\ObKey.cs" />
+    <Compile Include="Object\ObLichLamViec.cs" />
+    <Compile Include="Object\ObPhacDo.cs" />
+    <Compile Include="Object\ObPhieuXetNghiem.cs" />
+    <Compile Include="Object\ObDMNhomXetNghiem.cs" />
+    <Compile Include="Object\ObSLTon.cs" />
+    <Compile Include="Object\ObDMXetNghiem.cs" />
+    <Compile Include="Object\ObPhieuThuoc.cs" />
+    <Compile Include="Object\ObCTNhapKho.cs" />
+    <Compile Include="Object\ObBenhAn.cs" />
+    <Compile Include="Object\ObCDHA.cs" />
+    <Compile Include="Object\ObChiDinh.cs" />
+    <Compile Include="Object\ObCTChiDinh.cs" />
+    <Compile Include="Object\ObImage.cs" />
+    <Compile Include="Object\ObNhapKho.cs" />
+    <Compile Include="Object\ObPhieuThu.cs" />
+    <Compile Include="Object\ObSinhHieu.cs" />
+    <Compile Include="Object\ObStatus.cs" />
+    <Compile Include="Object\ObDesign.cs" />
+    <Compile Include="Object\ObRecord.cs" />
+    <Compile Include="Object\ObDMKho.cs" />
+    <Compile Include="Object\ObDMMau.cs" />
+    <Compile Include="Object\ObDMICD.cs" />
+    <Compile Include="Object\ObDMLK.cs" />
+    <Compile Include="Object\ObDMPK.cs" />
+    <Compile Include="Object\ObDMNhanSu.cs" />
+    <Compile Include="Object\ObDMTSo.cs" />
+    <Compile Include="Object\ObDMDonVi.cs" />
+    <Compile Include="Object\ObDMNhomDichVu.cs" />
+    <Compile Include="Object\ObDMDichVu.cs" />
+    <Compile Include="Object\ObCustomer.cs" />
+    <Compile Include="Object\ObTKBenhNhan.cs" />
+    <Compile Include="Object\ObUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafeLocalFree.cs" />
+    <Compile Include="UNCAccessWithCredentials.cs" />
+    <EmbeddedResource Include="frmKey.resx">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hospital.Connect\Hospital.Connect.csproj">
+      <Project>{78c45b70-bf89-4805-a798-66da5097f468}</Project>
+      <Name>Hospital.Connect</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dba\New\" />
+    <Folder Include="Object\New\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
