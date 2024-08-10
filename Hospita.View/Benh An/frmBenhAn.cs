@@ -396,7 +396,9 @@ namespace Hospital.App
                     teChanDoan.Text += "Thai " + soTuan + " tuần " + soNgay + " ngày";
 
                     decimal soN = (decimal)soNgay / 10;
-                    teSoTuoiThai.Value = soTuan + soN;
+                    //Todo Tuoi thai lon hon 100
+                    var tuoiThai = soTuan + soN > 100 ? 100 : soTuan + soN;
+                    teSoTuoiThai.Value = tuoiThai;
                 }
             }
         }

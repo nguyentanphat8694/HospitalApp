@@ -180,40 +180,41 @@ namespace Hospital.App
                 //tasks[i] = Task.Run(() => {
                 if (item == eTableName.DMDichVu && MainNTP.ObDMDichVuList.Count <= 0)
                     MainNTP.ObDMDichVuList = NTPObDMDichVu.GetListOb_DICHVU();
-                if (item == eTableName.DMNhomDichVu)
+                //Todo Cache Nhom Dich Vu
+                else if (item == eTableName.DMNhomDichVu)
                     MainNTP.ObDMNhomDichVuList = NTPObDMNhomDichVu.GetListOb();
-                if (item == eTableName.DMPK && MainNTP.ObDMPKList.Count <= 0)
+                else if (item == eTableName.DMPK && MainNTP.ObDMPKList.Count <= 0)
                     MainNTP.ObDMPKList = NTPObDMPK.GetListOb();
-                if (item == eTableName.Customer && MainNTP.ObCustomerList.Count <= 0)
+                else if (item == eTableName.Customer && MainNTP.ObCustomerList.Count <= 0)
                     MainNTP.ObCustomerList = NTPObCustomer.GetListOb();
-                if (item == eTableName.DMNhanSu && MainNTP.ObDMNhanSuList.Count <= 0)
+                else if (item == eTableName.DMNhanSu && MainNTP.ObDMNhanSuList.Count <= 0)
                     MainNTP.ObDMNhanSuList = NTPObDMNhanSu.GetListOb();
-                if (item == eTableName.DMDonVi && MainNTP.ObDMDonViList.Count <= 0)
+                else if (item == eTableName.DMDonVi && MainNTP.ObDMDonViList.Count <= 0)
                     MainNTP.ObDMDonViList = NTPObDMDonVi.GetListOb();
-                if (item == eTableName.DMThuoc && MainNTP.ObDMThuocList.Count <= 0)
+                else if (item == eTableName.DMThuoc && MainNTP.ObDMThuocList.Count <= 0)
                     MainNTP.ObDMThuocList = NTPObDMDichVu.GetListOb_THUOC();
-                if (item == eTableName.DMKho && MainNTP.ObDMKhoList.Count <= 0)
+                else if (item == eTableName.DMKho && MainNTP.ObDMKhoList.Count <= 0)
                     MainNTP.ObDMKhoList = NTPObDMKho.GetListOb();
-                if (item == eTableName.DMTSo && MainNTP.ObDMTSoList.Count <= 0)
+                else if (item == eTableName.DMTSo && MainNTP.ObDMTSoList.Count <= 0)
                     MainNTP.ObDMTSoList = NTPObDMTSo.GetListOb();
-                if (item == eTableName.DMICD && MainNTP.ObDMICDList.Count <= 0)
+                else if (item == eTableName.DMICD && MainNTP.ObDMICDList.Count <= 0)
                     MainNTP.ObDMICDList = NTPObDMICD.GetListOb();
-                if (item == eTableName.DMMau && MainNTP.ObDMMauList.Count <= 0)
+                else if (item == eTableName.DMMau && MainNTP.ObDMMauList.Count <= 0)
                     MainNTP.ObDMMauList = NTPObDMMau.GetListOb();
-                if (item == eTableName.User && MainNTP.ObUserList.Count <= 0)
+                else if (item == eTableName.User && MainNTP.ObUserList.Count <= 0)
                     MainNTP.ObUserList = NTPObUser.GetListOb();
-                if (item == eTableName.DMXetNghiem && MainNTP.ObDMXetNghiemList.Count <= 0)
+                else if (item == eTableName.DMXetNghiem && MainNTP.ObDMXetNghiemList.Count <= 0)
                     MainNTP.ObDMXetNghiemList = NTPObDMXetNghiem.GetListOb();
-                if (item == eTableName.DMNhomXetNghiem && MainNTP.ObDMNhomXetNghiemList.Count <= 0)
+                else if (item == eTableName.DMNhomXetNghiem && MainNTP.ObDMNhomXetNghiemList.Count <= 0)
                     MainNTP.ObDMNhomXetNghiemList = NTPObDMNhomXetNghiem.GetListOb();
-                if (item == eTableName.PhacDo && MainNTP.obPhacDoList.Count <= 0)
+                else if (item == eTableName.PhacDo && MainNTP.obPhacDoList.Count <= 0)
                     MainNTP.obPhacDoList = NTPObPhacDo.GetListOb();
-                if (item == eTableName.DMQuan && MainNTP.ObDMQuanList.Count <= 0)
+                else if (item == eTableName.DMQuan && MainNTP.ObDMQuanList.Count <= 0)
                     MainNTP.ObDMQuanList = NTPObDMQuan.GetListOb();
-                if (item == eTableName.DMTinh && MainNTP.ObDMTinhList.Count <= 0)
+                else if (item == eTableName.DMTinh && MainNTP.ObDMTinhList.Count <= 0)
                     MainNTP.ObDMTinhList = NTPObDMTinh.GetListOb();
 
-                if (item == eTableName.DMNgheNghiep && MainNTP.ObDMNgheNghiepList.Count <= 0)
+                else if (item == eTableName.DMNgheNghiep && MainNTP.ObDMNgheNghiepList.Count <= 0)
                     MainNTP.ObDMNgheNghiepList = NTPObDMNgheNghiep.GetListOb();
                 //});
                 //i++;
