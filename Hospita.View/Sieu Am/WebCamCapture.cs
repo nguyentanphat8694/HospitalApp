@@ -1,20 +1,16 @@
 using System;
-using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
-using AForge.Video;
 using AForge.Video.DirectShow;
 
 namespace Hospital.App
 {
-	/// <summary>
-	/// Summary description for UserControl1.
-	/// </summary>
-	[System.Drawing.ToolboxBitmap(typeof(WebCamCapture), "CAMERA.ICO")] // toolbox bitmap
+    /// <summary>
+    /// Summary description for UserControl1.
+    /// </summary>
+    [System.Drawing.ToolboxBitmap(typeof(WebCamCapture), "CAMERA.ICO")] // toolbox bitmap
 	[Designer("Sytem.Windows.Forms.Design.ParentControlDesigner,System.Design", typeof(System.ComponentModel.Design.IDesigner))] // make composite
 	public class WebCamCapture : System.Windows.Forms.UserControl
 	{

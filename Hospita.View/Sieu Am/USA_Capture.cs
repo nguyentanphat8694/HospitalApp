@@ -1,16 +1,13 @@
 using System;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
 using System.Windows.Forms;
-using System.Data;
 
 namespace Hospital.App
 {
-	/// <summary>
-	/// Summary description for Form1.
-	/// </summary>
-	public class USA_Capture : DevExpress.XtraEditors.XtraUserControl
+    /// <summary>
+    /// Summary description for Form1.
+    /// </summary>
+    public class USA_Capture : DevExpress.XtraEditors.XtraUserControl
     {
         private WebCamCapture webCamCapture;
         //private WebCamCapture ;

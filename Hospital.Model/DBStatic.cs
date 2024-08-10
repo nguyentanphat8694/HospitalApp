@@ -1,13 +1,11 @@
 
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace Hospital.App
 {
-	public static class DBStatic
+    public static class DBStatic
 	{
 		public static SqlConnection m_SqlConn = new SqlConnection();
 		private static SqlCommand m_SqlComm = new SqlCommand();

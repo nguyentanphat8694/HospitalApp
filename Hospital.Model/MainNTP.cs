@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.ComponentModel;
-using System.Threading.Tasks;
 using System.Globalization;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Net;
-using System.Collections;
-using System.Threading;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.BandedGrid;
 

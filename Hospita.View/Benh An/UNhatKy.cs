@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using System.Linq;
 
 namespace Hospital.App
