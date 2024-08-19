@@ -197,7 +197,9 @@ namespace Hospital.App
             {
                 cheSAThai.Checked = true;
                 decimal soN = (decimal)soNgay / 10;
-                teSoTuoiThai.Value = soTuan + soN;
+                //Todo Tuoi thai lon hon 100
+                var tuoiThai = soTuan + soN > 100 ? 100 : soTuan + soN;
+                teSoTuoiThai.Value = tuoiThai;
             }
         }
 

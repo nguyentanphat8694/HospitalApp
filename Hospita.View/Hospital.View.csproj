@@ -661,6 +661,12 @@
     <Compile Include="Xet Nghiem\FrmQLyXetNghiemSimple.Designer.cs">
       <DependentUpon>FrmQLyXetNghiemSimple.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xet Nghiem\frmXNNuocTieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xet Nghiem\frmXNNuocTieu.Designer.cs">
+      <DependentUpon>frmXNNuocTieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xet Nghiem\UDSChoXN.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -961,6 +967,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xet Nghiem\FrmQLyXetNghiemSimple.resx">
       <DependentUpon>FrmQLyXetNghiemSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xet Nghiem\frmXNNuocTieu.resx">
+      <DependentUpon>frmXNNuocTieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xet Nghiem\UDSChoXN.resx">
       <DependentUpon>UDSChoXN.cs</DependentUpon>

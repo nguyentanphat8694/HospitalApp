@@ -10,6 +10,7 @@ using System.Drawing.Imaging;
 using System.Net;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.BandedGrid;
+using Hospital.App.Keylist.New;
 
 namespace Hospital.App
 {
@@ -49,6 +50,7 @@ namespace Hospital.App
         public static KeysListObSinhHieu ObSinhHieuList = new KeysListObSinhHieu();
         public static KeysListObCTChiDinh ObCTChiDinhList = new KeysListObCTChiDinh();
         public static KeysListObCDHA ObCDHAList = new KeysListObCDHA();
+        public static KeysListObCDXNNT ObCDXNNTList = new KeysListObCDXNNT();
         public static KeysListObBenhAn ObBenhAnList = new KeysListObBenhAn();
         public static KeysListObPhieuThu ObPhieuThuList = new KeysListObPhieuThu();
         public static KeysListObPhieuThuoc obPhieuThuocList = new KeysListObPhieuThuoc();
