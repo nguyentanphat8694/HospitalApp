@@ -1,0 +1,22 @@
+B1: 
+CREATE TABLE tb_CDXNNT(
+	[Ma] [float] NOT NULL PRIMARY KEY,
+	[Ngay] [datetime] NULL,
+	[MaBN] [nvarchar](50) NULL,
+	[ChanDoan] [nvarchar](max) NULL,
+	[KeyCTChiDinh] [float] NULL,
+	[BSThucHien] [nvarchar](50) NULL,
+	[TrangThai] [nvarchar](50) NULL,
+	[CreateBy] [nvarchar](50) NULL,
+	[CreateTime] [nvarchar](50) NULL,
+	[UpdateBy] [nvarchar](50) NULL,
+	[UpdateTime] [nvarchar](50) NULL,
+	[DeleteBy] [nvarchar](50) NULL,
+	[DeleteTime] [nvarchar](50) NULL,
+	[MaMau] [nvarchar](50) NULL,
+	[NoiDungMau] [nvarchar](max) NULL,
+	[KetLuan] [nvarchar](250) NULL,
+);
+
+B2:
+Settings mẫu

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
+using Hospital.App.Xet_Nghiem;
 
 namespace Hospital.App
 {
@@ -19,7 +20,8 @@ namespace Hospital.App
         List<ClsDichVu> listUpdate = new List<ClsDichVu>();
         List<ClsDichVu> listDelete = new List<ClsDichVu>();
         public string ChanDoan = "";
-        void LoadData() {
+        void LoadData()
+        {
             List<eTableName> list = new List<eTableName>();
             list.Add(eTableName.DMDichVu);
             list.Add(eTableName.DMNhomDichVu);
@@ -27,10 +29,11 @@ namespace Hospital.App
             MainNTP.GetData(list);
         }
 
-        void InitDisplay() {
+        void InitDisplay()
+        {
             foreach (var item in MainNTP.ObDMDichVuList)
             {
-                if (item.Loai == (int)eLoaiHH.Dịch_vụ && !NTPUserSetting.NhomKham.Any(o=>o==item.TTChung.Nhom))
+                if (item.Loai == (int)eLoaiHH.Dịch_vụ && !NTPUserSetting.NhomKham.Any(o => o == item.TTChung.Nhom))
                 {
                     ClsDichVu cls = new ClsDichVu();
                     cls.MaDV = item.Ma;
@@ -58,8 +61,9 @@ namespace Hospital.App
             ClsDichVu cls = (ClsDichVu)viewDSDichVu.GetFocusedRow();
             if (cls == null) return;
 
-            if (listDichVu.Any(o => o.MaDV == cls.MaDV)) {
-                MessageBox.Show("Dịch vụ "+cls.Ten + " đã được chỉ định.");
+            if (listDichVu.Any(o => o.MaDV == cls.MaDV))
+            {
+                MessageBox.Show("Dịch vụ " + cls.Ten + " đã được chỉ định.");
                 return;
             }
             ObDMDichVu dm = MainNTP.ObDMDichVuList.Get(cls.MaDV);
@@ -90,7 +94,7 @@ namespace Hospital.App
                     c2.Ten = dm.Ten;
                 listDichVu.Add(c2);
             }
-            
+
             if (gridDichVu.DataSource == null)
                 gridDichVu.DataSource = listDichVu;
             viewDichVu.RefreshData();
@@ -110,13 +114,14 @@ namespace Hospital.App
             }
         }
 
-        public void Clear() {
+        public void Clear()
+        {
             listDichVu.Clear();
             gridDichVu.DataSource = listDichVu;
             viewDichVu.RefreshData();
         }
 
-        public bool Save(DateTime _Ngay,double keyCreate,string maBN)
+        public bool Save(DateTime _Ngay, double keyCreate, string maBN)
         {
             MainNTP.UpdateCellValueChanging(viewDichVu);
             foreach (var item in listDichVu)
@@ -155,7 +160,7 @@ namespace Hospital.App
                 ObCTChiDinh os = listDelete[i];
                 if (os == null) continue;
                 os.TrangThai = etrangthai.Đã_hủy.ToString();
-                if (MainNTP.ObCTChiDinhList.DeleteOb(os,etrangthai.Đã_hủy))
+                if (MainNTP.ObCTChiDinhList.DeleteOb(os, etrangthai.Đã_hủy))
                 {
                     listDelete.RemoveAt(i); i--;
                 }
@@ -186,13 +191,15 @@ namespace Hospital.App
 
         private void teSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Down) {
+            if (e.KeyCode == Keys.Down)
+            {
                 viewDSDichVu.Focus();
                 if (viewDSDichVu.FocusedRowHandle < 0)
                     viewDSDichVu.FocusedRowHandle = 0;
                 else viewDSDichVu.FocusedRowHandle += 1;
             }
-            else if (e.KeyCode == Keys.Enter) {
+            else if (e.KeyCode == Keys.Enter)
+            {
                 SetDichVu();
             }
         }
@@ -226,18 +233,22 @@ namespace Hospital.App
         {
             ClsDichVu cls = (ClsDichVu)viewDichVu.GetFocusedRow();
             if (cls == null) return;
-            if (!NTPValidate.IsEmpty(cls.MaPK)) {
+            if (!NTPValidate.IsEmpty(cls.MaPK))
+            {
                 MessageBox.Show("Dịch vụ khám. Không thể xóa!");
                 return;
             }
-            if (cls.Ma > 0) {
+            if (cls.Ma > 0)
+            {
                 ObCTChiDinh ct = MainNTP.ObCTChiDinhList.GetOb(cls.Ma);
-                if (ct != null) {
-                    if (ct.TrangThai == etrangthai.Hoàn_thành.ToString()) {
+                if (ct != null)
+                {
+                    if (ct.TrangThai == etrangthai.Hoàn_thành.ToString())
+                    {
                         MessageBox.Show("Dịch vụ " + cls.Ten + " đã thực hiện. Không thể xóa!");
                         return;
                     }
-                    if (ct.KeyPT>0)
+                    if (ct.KeyPT > 0)
                     {
                         MessageBox.Show("Dịch vụ " + cls.Ten + " đã thu tiền. Không thể xóa!");
                         return;
@@ -250,7 +261,7 @@ namespace Hospital.App
                     listDelete.Add(cls);
                 }
             }
-            
+
             viewDichVu.DeleteSelectedRows();
 
         }
@@ -277,7 +288,7 @@ namespace Hospital.App
         {
             string sv = ob.TenDV;
             if (ob.DMDichVu == null) return false;
-            if (!NTPUserSetting.NhomSA.Any(o => o == ob.DMDichVu.TTChung.Nhom)) return false;
+            if (!NTPUserSetting.NhomSA.Any(o => o == ob.DMDichVu.TTChung.Nhom) && !string.Equals(ob.DMDichVu.Ma, "NT")) return false;
             if (ob.KeyThucHien > 0) return false;
             if (ob.TrangThai == etrangthai.Đã_hủy.ToString()) return false;
             if (!NTPUserSetting.ThutienSau)
@@ -296,14 +307,19 @@ namespace Hospital.App
             ClsDichVu cls = (ClsDichVu)viewDichVu.GetFocusedRow();
             if (cls == null) return;
 
-            frmSieuAm frm = null;
-
             if (cls.KeyThucHien <= 0)
             {
                 ObCTChiDinh ct = MainNTP.ObCTChiDinhList.GetOb(cls.Ma);
                 if (ct == null)
                 {
                     MessageBox.Show("Vui lòng lưu bệnh án trước khi thực hiện dịch vụ này!");
+                    return;
+                }
+                if (string.Equals(ct.DMDichVu.Ma, "NT"))
+                {
+                    var frmXNNT = new frmXNNuocTieu();
+                    frmXNNT.SetNew(ct, this.ChanDoan);
+                    frmXNNT.Show(this);
                     return;
                 }
 
@@ -315,26 +331,31 @@ namespace Hospital.App
                 BA010110 or = new BA010110();
                 or.SetNew(cls);
                 or.ChanDoan = this.ChanDoan;
-
-                frm = new frmSieuAm();
+                var frm = new frmSieuAm();
                 frm.SetNew(or);
                 frm.Show(this);
                 frmBenhAn.isShowSieuAm = true;
                 return;
             }
 
-            if (cls.LoaiPhieuTH == (int)eLoaiPhieuTH.Sieu_Am) {
+            if (cls.LoaiPhieuTH == (int)eLoaiPhieuTH.Sieu_Am)
+            {
 
                 ObCDHA ob = MainNTP.ObCDHAList.GetOb(cls.KeyThucHien);
                 if (ob == null)
                 {
                     return;
                 }
-
-                frm = new frmSieuAm();
+                var frm = new frmSieuAm();
                 frm.SetModify(ob);
                 frm.Show();
                 frmBenhAn.isShowSieuAm = true;
+            }
+            else if (cls.LoaiPhieuTH == (int)eLoaiPhieuTH.XNNT)
+            {
+                var frmXNNT = new frmXNNuocTieu();
+                frmXNNT.SetModify(cls.KeyThucHien);
+                frmXNNT.Show(this);
             }
         }
 
