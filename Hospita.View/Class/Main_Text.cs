@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DevExpress.CodeParser;
+using Hospital.App.ReportModel;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Hospital.App
 {
@@ -109,9 +112,9 @@ namespace Hospital.App
         {
             List<string> lst = new List<string>();
             List<string> lT = new List<string>(strNoidung.Split(new char[]
-	{
-		'\n'
-	}));
+    {
+        '\n'
+    }));
             using (List<string>.Enumerator enumerator = lT.GetEnumerator())
             {
                 while (enumerator.MoveNext())
@@ -120,9 +123,9 @@ namespace Hospital.App
                     if (str.Contains(";"))
                     {
                         lst.AddRange(str.Split(new char[]
-				{
-					';'
-				}));
+                {
+                    ';'
+                }));
                     }
                     else
                     {
@@ -162,9 +165,9 @@ namespace Hospital.App
         {
             List<string[]> lst = new List<string[]>();
             List<string> lT = new List<string>(strNoidung.Split(new char[]
-	{
-		'\n'
-	}));
+    {
+        '\n'
+    }));
             using (List<string>.Enumerator enumerator = lT.GetEnumerator())
             {
                 while (enumerator.MoveNext())
@@ -173,28 +176,28 @@ namespace Hospital.App
                     if (str.Contains(";"))
                     {
                         string[] st = str.Split(new char[]
-				{
-					';'
-				});
+                {
+                    ';'
+                });
                         int cnt = 0;
                         string[] array = st;
                         for (int i = 0; i < array.Length; i++)
                         {
                             string s = array[i];
                             lst.Add(new string[]
-					{
-						s,
-						(cnt++ == 0) ? "\n" : ";"
-					});
+                    {
+                        s,
+                        (cnt++ == 0) ? "\n" : ";"
+                    });
                         }
                     }
                     else
                     {
                         lst.Add(new string[]
-				{
-					str,
-					"\n"
-				});
+                {
+                    str,
+                    "\n"
+                });
                     }
                 }
             }
@@ -215,7 +218,7 @@ namespace Hospital.App
 
             SA020110 cls = new SA020110();
             ObCDHA obIn = new ObCDHA(obCur);
-            
+
             List<ObImage> listImg = obCur.TTChung.Images.FindAll(o => o.In);
             obIn.TTChung.Images = new List<ObImage>();
             if (listImg != null)
@@ -268,6 +271,46 @@ namespace Hospital.App
             var maBN = cls.MaBenhNhan;
             rp.SetData(rp_name, new List<XN020110>() { cls });
 
+            return rp;
+        }
+
+        public static RP020100 GetReportPhieuThuoc(ObPhieuThuoc phieuThuoc)
+        {
+            if (phieuThuoc == null)
+                return null;
+            RP020100 rp = new RP020100();
+            string rp_name = e_REPORTNTP.Phieu_thuoc.ToString();
+            var dataSource = new MRDonThuoc();
+            var benhAn = NTPObBenhAn.GetObWF_PK(phieuThuoc.MaBA);
+            dataSource.ChanDoan = benhAn.ChanDoanChinh;
+            var createdDate = DateTime.ParseExact(phieuThuoc.CreateTime, "yyyyMMddHHmmss", null);
+            if (createdDate != null)
+                dataSource.NgayTao = $"Ngày {createdDate.Day.ToString("00")} tháng {createdDate.Month.ToString("00")} năm {createdDate.Year}";
+            var bn = MainNTP.ObCustomerList.Get(phieuThuoc.MaBN);
+            if (bn != null)
+            {
+                dataSource.HoTen = bn.Ten;
+                dataSource.DiaChi = bn.DiaChiFull;
+                dataSource.NamSinh = bn.Namsinh.ToString();
+                dataSource.DT = bn.Dienthoai;
+                dataSource.DonThuoc = new List<MThuoc>();
+                dataSource.Para = bn.TTBenhnhan.Para;
+                for (var i = 0; i < phieuThuoc.DSDichVu.Count; i++)
+                {
+                    var thuoc = phieuThuoc.DSDichVu[i];
+                    var mThuoc = new MThuoc()
+                    {
+                        STT = (i + 1).ToString(),
+                        TenThuoc = !string.IsNullOrEmpty(thuoc.TenDV) ? thuoc.TenDV : thuoc.MaDV,
+                        SoLuong = thuoc.SL.ToString(),
+                        DonViTinh = thuoc.TenDonVi,
+                        Note = thuoc.TTChung.CachDung
+                    };
+                    dataSource.DonThuoc.Add(mThuoc);
+                }
+
+            }
+            rp.SetData(rp_name, new List<MRDonThuoc>() { dataSource });
             return rp;
         }
     }

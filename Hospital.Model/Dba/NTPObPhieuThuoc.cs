@@ -395,6 +395,110 @@ namespace Hospital.App
             }
             return list;
         }
+        public static KeysListObPhieuThuoc GetListObByMaBN(string maBN)
+        {
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = "SELECT * FROM tb_PhieuThuoc WHERE (MaBN = @MaBN)";
+            SqlParameter sqlParameter = new SqlParameter();
+            sqlParameter.ParameterName = "MaBN";
+            sqlParameter.SqlDbType = SqlDbType.NVarChar;
+            sqlParameter.Value = maBN;
+            sqlCommand.Parameters.Add(sqlParameter);
+            SqlDataReader sqlDataReader = DBStatic.SqlExcuteQuery(sqlCommand);
+            KeysListObPhieuThuoc list = new KeysListObPhieuThuoc();
+            if (null == sqlDataReader)
+            {
+                list = null;
+            }
+            else
+            {
+                ObPhieuThuoc Ob = null;
+                while (sqlDataReader.Read())
+                {
+                    Ob = new ObPhieuThuoc();
+                    if (!sqlDataReader.IsDBNull(0))
+                    {
+                        Ob.Ma = sqlDataReader.GetDouble(0);
+                    }
+                    if (!sqlDataReader.IsDBNull(1))
+                    {
+                        Ob.Ngay = sqlDataReader.GetDateTime(1);
+                    }
+                    if (!sqlDataReader.IsDBNull(2))
+                    {
+                        Ob.MaBN = sqlDataReader.GetString(2);
+                    }
+                    if (!sqlDataReader.IsDBNull(3))
+                    {
+                        Ob.MaBA = sqlDataReader.GetDouble(3);
+                    }
+                    if (!sqlDataReader.IsDBNull(4))
+                    {
+                        Ob.ChanDoan = sqlDataReader.GetString(4);
+                    }
+                    if (!sqlDataReader.IsDBNull(5))
+                    {
+                        Ob.TrangThai = sqlDataReader.GetString(5);
+                    }
+                    if (!sqlDataReader.IsDBNull(6))
+                    {
+                        Ob.CreateBy = sqlDataReader.GetString(6);
+                    }
+                    if (!sqlDataReader.IsDBNull(7))
+                    {
+                        Ob.CreateTime = sqlDataReader.GetString(7);
+                    }
+                    if (!sqlDataReader.IsDBNull(8))
+                    {
+                        Ob.UpdateBy = sqlDataReader.GetString(8);
+                    }
+                    if (!sqlDataReader.IsDBNull(9))
+                    {
+                        Ob.UpdateTime = sqlDataReader.GetString(9);
+                    }
+                    if (!sqlDataReader.IsDBNull(10))
+                    {
+                        Ob.DeleteBy = sqlDataReader.GetString(10);
+                    }
+                    if (!sqlDataReader.IsDBNull(11))
+                    {
+                        Ob.DeleteTime = sqlDataReader.GetString(11);
+                    }
+                    if (!sqlDataReader.IsDBNull(12))
+                    {
+                        byte[] array = (byte[])sqlDataReader.GetValue(12);
+                        if (array.Length > 1)
+                        {
+                            try
+                            {
+                                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                                MemoryStream serializationStream = new MemoryStream(array);
+                                Ob.TTChung = (ClsTTPhieuThuoc)binaryFormatter.Deserialize(serializationStream);
+                            }
+                            catch
+                            {
+                                Ob.TTChung = new ClsTTPhieuThuoc();
+                            }
+                        }
+                        else
+                        {
+                            Ob.TTChung = new ClsTTPhieuThuoc();
+                        }
+                    }
+                    else
+                    {
+                        Ob.TTChung = new ClsTTPhieuThuoc();
+                    }
+                    if (!sqlDataReader.IsDBNull(13))
+                    {
+                        Ob.Loai = sqlDataReader.GetInt32(13);
+                    }
+                    list.Add(Ob);
+                }
+                sqlDataReader.Close();
+            }
+            return list;
+        }
         public static KeysListObPhieuThuoc GetListOb(DateTime tuNgay,DateTime denNgay)
         {
             SqlCommand sqlCommand = new SqlCommand();

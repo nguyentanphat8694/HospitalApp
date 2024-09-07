@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
+using Hospital.App.ReportModel;
 
 namespace Hospital.App
 {
@@ -78,11 +79,34 @@ namespace Hospital.App
         }
         void Set_FOCUS(Cls_ReportNTP cls) {
             r = new RP020100();
-            
+
             switch(cls.TenReport)
             {
                 case "Phieu_chi_dinh":
                 case "Phieu_thuoc":
+                    {
+                        var donThuoc = new MRDonThuoc()
+                        {
+                            HoTen = "Nguyễn Tấn Phát",
+                            Para = "0000",
+                            DiaChi = "71 Lê Văn Lương",
+                            ChanDoan = "Ốm yếu",
+                            NamSinh = "1994",
+                            DT = "0765697016",
+                            DonThuoc = new List<MThuoc>()
+                            {
+                                new MThuoc(){STT="1", TenThuoc="Vitamin A", SoLuong="20", DonViTinh="Viên", Note="Uống ngày 2 lần, lần 1 viên sau ăn no"},
+                                new MThuoc(){STT="2", TenThuoc="Megyna", SoLuong="10", DonViTinh="Viên", Note="Đặt âm đạo mỗi tối 1 viên"},
+                                new MThuoc(){STT="3", TenThuoc="Vagina", SoLuong="1", DonViTinh="Chai", Note="Rửa âm hộ ngày 2 lần"},
+                                new MThuoc(){STT="4", TenThuoc="Vitamin A", SoLuong="20", DonViTinh="Viên", Note="Uống ngày 2 lần, lần 1 viên sau ăn no"},
+                                new MThuoc(){STT="5", TenThuoc="Megyna", SoLuong="10", DonViTinh="Viên", Note="Đặt âm đạo mỗi tối 1 viên"},
+                                new MThuoc(){STT="6", TenThuoc="Vagina", SoLuong="1", DonViTinh="Chai", Note="Rửa âm hộ ngày 2 lần"}
+                            }
+                        };
+                        r.SetData(cls.TenReport.ToString(), new List<MRDonThuoc>() { donThuoc });
+                        this.SetReport(cls.TenReport, new List<MRDonThuoc>() { donThuoc });
+                        break;
+                    }
                 case "Giay_Vao_Vien":
                 case "Benh_An":
                     {

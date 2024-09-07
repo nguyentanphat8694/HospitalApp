@@ -315,7 +315,7 @@ namespace Hospital.App
                     MessageBox.Show("Vui lòng lưu bệnh án trước khi thực hiện dịch vụ này!");
                     return;
                 }
-                if (string.Equals(ct.DMDichVu.Ma, "NT"))
+                if (string.Equals(ct?.DMDichVu?.Ma, "NT"))
                 {
                     var frmXNNT = new frmXNNuocTieu();
                     frmXNNT.SetNew(ct, this.ChanDoan);

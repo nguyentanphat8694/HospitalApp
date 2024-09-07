@@ -16,7 +16,7 @@ namespace Hospital.App
         public void SetLichSuKham(string maBN)
         {
             listNhatKy.Clear();
-            List<ClsNhatKy> listTemp = new List<ClsNhatKy>();
+            var listTemp = new List<ClsNhatKy>();
             KeysListObCTChiDinh keys = NTPObCTChiDinh.GetListOb(maBN);
             ClsNhatKy cls = null;
             ObCDHA cdha = null;
@@ -78,6 +78,9 @@ namespace Hospital.App
                     }
                 }
             }
+            var nhatKyThuoc = GetListNhatKyPhieuThuoc(maBN);
+            if (nhatKyThuoc.Count > 0)
+                listTemp.AddRange(nhatKyThuoc);
 
             int x = 1;
             ClsNhatKy clsNK = null;
@@ -102,11 +105,28 @@ namespace Hospital.App
 
             viewDSDichVu.ExpandAllGroups();
         }
+        string nameDonThuoc = "Đơn thuốc";
+        public List<ClsNhatKy> GetListNhatKyPhieuThuoc(string maBN)
+        {
+            var rs = new List<ClsNhatKy>();
+            var listThuoc = NTPObPhieuThuoc.GetListObByMaBN(maBN);
+            foreach(var thuoc in listThuoc)
+            {
+                var cls = new ClsNhatKy();
+                cls.TenDV = nameDonThuoc;
+                cls.Ngay = thuoc.Ngay.ToString("dd/MM/yyyy");
+                cls.dtNgay = thuoc.Ngay.Date;
+                cls.KeyCTChiDinh = thuoc.Ma;
+                cls.Data = thuoc;
+                rs.Add(cls);
+            }
+            return rs;
+        }
 
         void SetPrintPreview()
         {
             prKQCLS.PrintingSystem = null;
-            ClsNhatKy cls = (ClsNhatKy)viewDSDichVu.GetFocusedRow();
+            var cls = (ClsNhatKy)viewDSDichVu.GetFocusedRow();
             if (cls != null)
             {
                 if (cls.LoaiPhieu == (int)eLoaiPhieuTH.Sieu_Am || cls.LoaiPhieu == (int)eLoaiPhieuTH.CLS)
@@ -142,6 +162,16 @@ namespace Hospital.App
                         rp.CreateDocument(true);
                     }
                 }
+                else if (string.Equals(cls.TenDV, nameDonThuoc))
+                {
+                    var rp = Main_View.GetReportPhieuThuoc(cls.Data as ObPhieuThuoc);
+                    if (rp != null)
+                    {
+                        prKQCLS.PrintingSystem = rp.PrintingSystem;
+                        rp.CreateDocument(true);
+                    }
+                }
+
             }
         }
 

@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Linq;
 using DevExpress.XtraReports.UI;
+using Hospital.App.UserControl;
 
 namespace Hospital.App
 {
@@ -189,7 +190,10 @@ namespace Hospital.App
             deNgay.DateTime = MainNTP._Ngay.Date;
 
             deNgayDen.DateTime = MainNTP._Ngay;
-
+            var uKhamSan = new UKhamSan();
+            uKhamSan.Dock = DockStyle.Left;
+            uKhamSan.Location = new System.Drawing.Point(240, 0);
+            scrollControlCTChiDinh.Controls.Add(uKhamSan);
         }
 
         private void LoadControl()
@@ -1196,5 +1200,10 @@ namespace Hospital.App
         }
 
         bool flag = false;
+
+        private void labelControl20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

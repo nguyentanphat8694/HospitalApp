@@ -24,10 +24,13 @@ namespace Hospital.App
         {
             return NTPObPhieuThuoc.GetObWF_PK(ma);
         }
-
         public double GetID()
         {
             return NTPObPhieuThuoc.GetNextID();
+        }
+        public KeysListObPhieuThuoc GetPhieuThuocsByMaBN(string maBN)
+        {
+            return NTPObPhieuThuoc.GetListObByMaBN(maBN);
         }
     }
 }

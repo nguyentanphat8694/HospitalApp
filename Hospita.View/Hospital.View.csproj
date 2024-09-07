@@ -583,6 +583,18 @@
     <Compile Include="UserControl\UDichVuUtils.Designer.cs">
       <DependentUpon>UDichVuUtils.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UKhamPhuKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UKhamPhuKhoa.Designer.cs">
+      <DependentUpon>UKhamPhuKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UKhamSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UKhamSan.Designer.cs">
+      <DependentUpon>UKhamSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UTimBN.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -928,6 +940,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UDichVuUtils.resx">
       <DependentUpon>UDichVuUtils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UKhamPhuKhoa.resx">
+      <DependentUpon>UKhamPhuKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UKhamSan.resx">
+      <DependentUpon>UKhamSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UTimBN.resx">
       <DependentUpon>UTimBN.cs</DependentUpon>
