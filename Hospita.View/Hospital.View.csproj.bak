@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hospital.App</RootNamespace>
     <AssemblyName>Hospital.View</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -30,6 +30,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,33 +62,36 @@
     <Reference Include="AForge.Video.FFMPEG">
       <HintPath>..\..\..\..\SHPT\DEMO BV\SHPT.Hospital\EXQLyPhongKham_Canlamsang\EXQLyPhongKham\bin\Debug\AForge.Video.FFMPEG.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeParser.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v12.2.UI, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v12.2.Extensions, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v12.2.Wizard, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v12.2.Extensions, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v12.2.Extensions, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Reporting.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.Expression.Encoder">
       <HintPath>..\..\Hospital.App.2015\SHPT.Utils.Capture\bin\Debug\Microsoft.Expression.Encoder.dll</HintPath>
     </Reference>
@@ -124,6 +128,7 @@
       <DependentUpon>BA000000.cs</DependentUpon>
     </Compile>
     <Compile Include="Benh An\ClsNhatKy.cs" />
+    <Compile Include="Benh An\EKhamData.cs" />
     <Compile Include="Benh An\frmDSDaKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,11 +206,23 @@
     <Compile Include="Dang Ky\frmDangKy.Designer.cs">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dang Ky\frmDSDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dang Ky\frmDSDangKy.Designer.cs">
+      <DependentUpon>frmDSDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dang Ky\frmDSHenKham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dang Ky\frmDSHenKham.Designer.cs">
       <DependentUpon>frmDSHenKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dang Ky\FrmMainDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dang Ky\FrmMainDangKy.Designer.cs">
+      <DependentUpon>FrmMainDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="Dang Ky\MeKong_DBStatic.cs" />
     <Compile Include="DM\BN010100.cs">
@@ -495,11 +512,29 @@
     <Compile Include="ThongKe\UTKKhamBenh.Designer.cs">
       <DependentUpon>UTKKhamBenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thu Tien\UMainThuTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Thu Tien\UMainThuTien.Designer.cs">
+      <DependentUpon>UMainThuTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thu Tien\frmDSDaThu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Thu Tien\frmDSDaThu.Designer.cs">
       <DependentUpon>frmDSDaThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thu Tien\frmDSChoThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thu Tien\frmDSChoThuTien.Designer.cs">
+      <DependentUpon>frmDSChoThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thu Tien\UDSDaThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Thu Tien\UDSDaThu.Designer.cs">
+      <DependentUpon>UDSDaThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Thu Tien\TT000000.cs">
       <SubType>Form</SubType>
@@ -519,17 +554,17 @@
     <Compile Include="Dang Ky\UDangKy.Designer.cs">
       <DependentUpon>UDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dang Ky\frmDSDangKy.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Dang Ky\UDSDangKy.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dang Ky\frmDSDangKy.Designer.cs">
-      <DependentUpon>frmDSDangKy.cs</DependentUpon>
+    <Compile Include="Dang Ky\UDSDangKy.Designer.cs">
+      <DependentUpon>UDSDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thu Tien\frmDSChoThuTien.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Thu Tien\UDSChoThuTien.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Thu Tien\frmDSChoThuTien.Designer.cs">
-      <DependentUpon>frmDSChoThuTien.cs</DependentUpon>
+    <Compile Include="Thu Tien\UDSChoThuTien.Designer.cs">
+      <DependentUpon>UDSChoThuTien.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thu Tien\frmPhieuThu.cs">
@@ -549,6 +584,18 @@
     </Compile>
     <Compile Include="UserControl\UDichVuUtils.Designer.cs">
       <DependentUpon>UDichVuUtils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UKhamPhuKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UKhamPhuKhoa.Designer.cs">
+      <DependentUpon>UKhamPhuKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UKhamSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UKhamSan.Designer.cs">
+      <DependentUpon>UKhamSan.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UTimBN.cs">
       <SubType>UserControl</SubType>
@@ -628,6 +675,12 @@
     <Compile Include="Xet Nghiem\FrmQLyXetNghiemSimple.Designer.cs">
       <DependentUpon>FrmQLyXetNghiemSimple.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xet Nghiem\frmXNNuocTieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xet Nghiem\frmXNNuocTieu.Designer.cs">
+      <DependentUpon>frmXNNuocTieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xet Nghiem\UDSChoXN.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -688,8 +741,14 @@
     <EmbeddedResource Include="Dang Ky\frmDangKy.resx">
       <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dang Ky\frmDSDangKy.resx">
+      <DependentUpon>frmDSDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dang Ky\frmDSHenKham.resx">
       <DependentUpon>frmDSHenKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dang Ky\FrmMainDangKy.resx">
+      <DependentUpon>FrmMainDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DM\BN010100.resx">
       <DependentUpon>BN010100.cs</DependentUpon>
@@ -837,8 +896,17 @@
     <EmbeddedResource Include="ThongKe\UTKKhamBenh.resx">
       <DependentUpon>UTKKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Thu Tien\UMainThuTien.resx">
+      <DependentUpon>UMainThuTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Thu Tien\frmDSDaThu.resx">
       <DependentUpon>frmDSDaThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thu Tien\frmDSChoThuTien.resx">
+      <DependentUpon>frmDSChoThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thu Tien\UDSDaThu.resx">
+      <DependentUpon>UDSDaThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thu Tien\TT000000.resx">
       <DependentUpon>TT000000.cs</DependentUpon>
@@ -849,8 +917,8 @@
     <EmbeddedResource Include="Dang Ky\UDangKy.resx">
       <DependentUpon>UDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dang Ky\frmDSDangKy.resx">
-      <DependentUpon>frmDSDangKy.cs</DependentUpon>
+    <EmbeddedResource Include="Dang Ky\UDSDangKy.resx">
+      <DependentUpon>UDSDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -863,8 +931,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Thu Tien\frmDSChoThuTien.resx">
-      <DependentUpon>frmDSChoThuTien.cs</DependentUpon>
+    <EmbeddedResource Include="Thu Tien\UDSChoThuTien.resx">
+      <DependentUpon>UDSChoThuTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thu Tien\frmPhieuThu.resx">
       <DependentUpon>frmPhieuThu.cs</DependentUpon>
@@ -874,6 +942,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UDichVuUtils.resx">
       <DependentUpon>UDichVuUtils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UKhamPhuKhoa.resx">
+      <DependentUpon>UKhamPhuKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UKhamSan.resx">
+      <DependentUpon>UKhamSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UTimBN.resx">
       <DependentUpon>UTimBN.cs</DependentUpon>
@@ -913,6 +987,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xet Nghiem\FrmQLyXetNghiemSimple.resx">
       <DependentUpon>FrmQLyXetNghiemSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xet Nghiem\frmXNNuocTieu.resx">
+      <DependentUpon>frmXNNuocTieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xet Nghiem\UDSChoXN.resx">
       <DependentUpon>UDSChoXN.cs</DependentUpon>

@@ -1363,7 +1363,7 @@
             this.recNOIDUNG.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Visible;
             this.recNOIDUNG.Size = new System.Drawing.Size(594, 619);
             this.recNOIDUNG.TabIndex = 11;
-            this.recNOIDUNG.Views.DraftView.Padding = new System.Windows.Forms.Padding(45, 4, 0, 0);
+            this.recNOIDUNG.Views.DraftView.Padding = new DevExpress.Portable.PortablePadding(45, 4, 0, 0);
             this.recNOIDUNG.TextChanged += new System.EventHandler(this.recNOIDUNG_TextChanged);
             // 
             // Frm_DMMau

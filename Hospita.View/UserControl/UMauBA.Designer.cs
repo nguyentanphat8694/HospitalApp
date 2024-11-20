@@ -110,7 +110,7 @@
             this.rtxtNOIDUNG.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Visible;
             this.rtxtNOIDUNG.Size = new System.Drawing.Size(684, 455);
             this.rtxtNOIDUNG.TabIndex = 13;
-            this.rtxtNOIDUNG.Views.DraftView.Padding = new System.Windows.Forms.Padding(45, 4, 0, 0);
+            this.rtxtNOIDUNG.Views.DraftView.Padding = new DevExpress.Portable.PortablePadding(45, 4, 0, 0);
             // 
             // UMauBA
             // 
