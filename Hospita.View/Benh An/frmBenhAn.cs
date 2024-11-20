@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Linq;
 using DevExpress.XtraReports.UI;
 using Hospital.App.UserControl;
+using DevExpress.XtraEditors;
 
 namespace Hospital.App
 {
@@ -190,10 +191,6 @@ namespace Hospital.App
             deNgay.DateTime = MainNTP._Ngay.Date;
 
             deNgayDen.DateTime = MainNTP._Ngay;
-            var uKhamSan = new UKhamSan();
-            uKhamSan.Dock = DockStyle.Left;
-            uKhamSan.Location = new System.Drawing.Point(240, 0);
-            scrollControlCTChiDinh.Controls.Add(uKhamSan);
         }
 
         private void LoadControl()
@@ -432,7 +429,7 @@ namespace Hospital.App
 
             try
             {
-
+                SetViewBaseOnDichVu(dv.MaDV);
                 showMessageHTK = false;
                 teMaBN.Text = dv.MaBN;
 
@@ -546,6 +543,7 @@ namespace Hospital.App
                 #region obCTChiDinh
 
                 obCTChiDinh = MainNTP.ObCTChiDinhList.GetOb(ob.KeyCTChiDinh);
+                SetViewBaseOnDichVu(obCTChiDinh.MaDV);
                 #endregion
                 #region obChiDinh - CTChiDinh
                 loadChiDinh();
@@ -573,6 +571,18 @@ namespace Hospital.App
                 MessageBox.Show("Đã xãy ra lỗi, Vui lòng thử lại " + ex.ToString());
                 this.Close();
             }
+        }
+
+        private void SetViewBaseOnDichVu(string maDv)
+        {
+            XtraUserControl control = null;
+            if (string.Equals(maDv, "KT"))
+                control = new UKhamSan();
+            else if (string.Equals(maDv, "KPK"))
+                control = new UKhamPhuKhoa();
+            control.Dock = DockStyle.Left;
+            control.Location = new System.Drawing.Point(240, 0);
+            scrollControlCTChiDinh.Controls.Add(control);
         }
 
         void loadChiDinh()

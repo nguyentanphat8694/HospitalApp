@@ -127,6 +127,7 @@
       <DependentUpon>BA000000.cs</DependentUpon>
     </Compile>
     <Compile Include="Benh An\ClsNhatKy.cs" />
+    <Compile Include="Benh An\EKhamData.cs" />
     <Compile Include="Benh An\frmDSDaKham.cs">
       <SubType>Form</SubType>
     </Compile>
